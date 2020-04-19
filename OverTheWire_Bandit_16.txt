@@ -1,0 +1,154 @@
+Level 16->17
+
+bandit16@bandit:~$ man nc
+bandit16@bandit:~$ man nmap
+bandit16@bandit:~$ nc -z -nv 127.0.0.1 31000-32000
+(UNKNOWN) [127.0.0.1] 31790 (?) open
+
+^C
+bandit16@bandit:~$ openssl s_client -connect localhost:31790
+CONNECTED(00000003)
+depth=0 CN = localhost
+verify error:num=18:self signed certificate
+verify return:1
+depth=0 CN = localhost
+verify return:1
+---
+Certificate chain
+ 0 s:/CN=localhost
+   i:/CN=localhost
+---
+Server certificate
+-----BEGIN CERTIFICATE-----
+MIICBjCCAW+gAwIBAgIEBKMOoTANBgkqhkiG9w0BAQUFADAUMRIwEAYDVQQDDAls
+b2NhbGhvc3QwHhcNMjAwNDA2MjIzMjQyWhcNMjEwNDA2MjIzMjQyWjAUMRIwEAYD
+VQQDDAlsb2NhbGhvc3QwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBALags2qr
+lWfnM53o914J6CWEJ/gm8EnVrIzBRKUvWzHfiviUw9pcRDPb4sisxcrwts23fzh4
+LDGAuytnRxe5CeVmdJm+wNYK0tKR5FHwGgicDShmj+THsCiPRlF25jhgPZwKt2zs
+m5IFth2KrMI1PmBYpV7Kdomw/6E61Z6qIj1zAgMBAAGjZTBjMBQGA1UdEQQNMAuC
+CWxvY2FsaG9zdDBLBglghkgBhvhCAQ0EPhY8QXV0b21hdGljYWxseSBnZW5lcmF0
+ZWQgYnkgTmNhdC4gU2VlIGh0dHBzOi8vbm1hcC5vcmcvbmNhdC8uMA0GCSqGSIb3
+DQEBBQUAA4GBAJBZ5d4MkQZi3o1aQYdcoqF5skeRHBiurIKzIruuAxY0A+3BY46J
+4HXHlslM0PAGnpSFVs0iEV3dgDtSW+pZECbycZpuZ5auOxkQ0on/2Zx0OXzQUbYP
+j4xvM1i8c8NpUqmFMcSn4ND+5nLI53ka6DE4PVfsxfPHa3IIJoV4yE9a
+-----END CERTIFICATE-----
+subject=/CN=localhost
+issuer=/CN=localhost
+---
+No client certificate CA names sent
+Peer signing digest: SHA512
+Server Temp Key: X25519, 253 bits
+---
+SSL handshake has read 1019 bytes and written 269 bytes
+Verification error: self signed certificate
+---
+New, TLSv1.2, Cipher is ECDHE-RSA-AES256-GCM-SHA384
+Server public key is 1024 bit
+Secure Renegotiation IS supported
+Compression: NONE
+Expansion: NONE
+No ALPN negotiated
+SSL-Session:
+    Protocol  : TLSv1.2
+    Cipher    : ECDHE-RSA-AES256-GCM-SHA384
+    Session-ID: EDBEC2843CB5455187B00DDD6E0862E2B17BC89F051FB58A15DC8234D63066D2
+    Session-ID-ctx: 
+    Master-Key: D1B4510DC690007F16D5AFFCF0FB1B23D666E74D09BCE1081A98D4F92B39E0A7806D2F8E3AE69DA46F8121B57093EDFD
+    PSK identity: None
+    PSK identity hint: None
+    SRP username: None
+    TLS session ticket lifetime hint: 7200 (seconds)
+    TLS session ticket:
+    0000 - 8e 9a 4d ec 1c f4 6b 35-30 ba 86 7d cf 4c 4a 6d   ..M...k50..}.LJm
+    0010 - af 48 ca 53 ec d0 d8 85-44 3b 32 7d b8 d6 b9 27   .H.S....D;2}...'
+    0020 - 16 b0 8c a8 4c 3f 74 21-9e 40 d3 7f f0 93 d6 fc   ....L?t!.@......
+    0030 - 8a ea 1d 36 78 51 46 f9-93 d1 a5 3d 11 a5 8f ce   ...6xQF....=....
+    0040 - 7f ec 9a a0 e1 2a 52 3f-39 1c e0 1c 75 61 f9 34   .....*R?9...ua.4
+    0050 - d5 45 b8 45 3e 09 ed 0a-8c 0f 02 12 12 ed 1d 96   .E.E>...........
+    0060 - 85 71 9f 1f 96 99 d9 90-a9 6b 8e 37 17 a5 87 10   .q.......k.7....
+    0070 - 80 9c 85 3f 8a aa 7e c8-9c 56 52 91 89 e4 11 3a   ...?..~..VR....:
+    0080 - 86 dd e4 6f da dd 30 28-93 dd f2 01 e6 ef f1 b2   ...o..0(........
+    0090 - c2 99 1d 51 58 28 0a 28-d8 86 42 ab cb 87 e9 6f   ...QX(.(..B....o
+
+    Start Time: 1587041969
+    Timeout   : 7200 (sec)
+    Verify return code: 18 (self signed certificate)
+    Extended master secret: yes
+---
+cluFn7wTiGryunymYOu4RcffSxQluehd
+Correct!
+-----BEGIN RSA PRIVATE KEY-----
+MIIEogIBAAKCAQEAvmOkuifmMg6HL2YPIOjon6iWfbp7c3jx34YkYWqUH57SUdyJ
+imZzeyGC0gtZPGujUSxiJSWI/oTqexh+cAMTSMlOJf7+BrJObArnxd9Y7YT2bRPQ
+Ja6Lzb558YW3FZl87ORiO+rW4LCDCNd2lUvLE/GL2GWyuKN0K5iCd5TbtJzEkQTu
+DSt2mcNn4rhAL+JFr56o4T6z8WWAW18BR6yGrMq7Q/kALHYW3OekePQAzL0VUYbW
+JGTi65CxbCnzc/w4+mqQyvmzpWtMAzJTzAzQxNbkR2MBGySxDLrjg0LWN6sK7wNX
+x0YVztz/zbIkPjfkU1jHS+9EbVNj+D1XFOJuaQIDAQABAoIBABagpxpM1aoLWfvD
+KHcj10nqcoBc4oE11aFYQwik7xfW+24pRNuDE6SFthOar69jp5RlLwD1NhPx3iBl
+J9nOM8OJ0VToum43UOS8YxF8WwhXriYGnc1sskbwpXOUDc9uX4+UESzH22P29ovd
+d8WErY0gPxun8pbJLmxkAtWNhpMvfe0050vk9TL5wqbu9AlbssgTcCXkMQnPw9nC
+YNN6DDP2lbcBrvgT9YCNL6C+ZKufD52yOQ9qOkwFTEQpjtF4uNtJom+asvlpmS8A
+vLY9r60wYSvmZhNqBUrj7lyCtXMIu1kkd4w7F77k+DjHoAXyxcUp1DGL51sOmama
++TOWWgECgYEA8JtPxP0GRJ+IQkX262jM3dEIkza8ky5moIwUqYdsx0NxHgRRhORT
+8c8hAuRBb2G82so8vUHk/fur85OEfc9TncnCY2crpoqsghifKLxrLgtT+qDpfZnx
+SatLdt8GfQ85yA7hnWWJ2MxF3NaeSDm75Lsm+tBbAiyc9P2jGRNtMSkCgYEAypHd
+HCctNi/FwjulhttFx/rHYKhLidZDFYeiE/v45bN4yFm8x7R/b0iE7KaszX+Exdvt
+SghaTdcG0Knyw1bpJVyusavPzpaJMjdJ6tcFhVAbAjm7enCIvGCSx+X3l5SiWg0A
+R57hJglezIiVjv3aGwHwvlZvtszK6zV6oXFAu0ECgYAbjo46T4hyP5tJi93V5HDi
+Ttiek7xRVxUl+iU7rWkGAXFpMLFteQEsRr7PJ/lemmEY5eTDAFMLy9FL2m9oQWCg
+R8VdwSk8r9FGLS+9aKcV5PI/WEKlwgXinB3OhYimtiG2Cg5JCqIZFHxD6MjEGOiu
+L8ktHMPvodBwNsSBULpG0QKBgBAplTfC1HOnWiMGOU3KPwYWt0O6CdTkmJOmL8Ni
+blh9elyZ9FsGxsgtRBXRsqXuz7wtsQAgLHxbdLq/ZJQ7YfzOKU4ZxEnabvXnvWkU
+YOdjHdSOoKvDQNWu6ucyLRAWFuISeXw9a/9p7ftpxm0TSgyvmfLF2MIAEwyzRqaM
+77pBAoGAMmjmIJdjp+Ez8duyn3ieo36yrttF5NSsJLAbxFpdlc1gvtGCWW+9Cq0b
+dxviW8+TFVEBl1O4f7HVm6EpTscdDxU+bCXWkfjuRb7Dy9GOtt9JPsX8MBTakzh3
+vBgsyi/sN3RqRBcGU40fOoZyfAMT8s1m/uYv52O6IgeuZ/ujbjY=
+-----END RSA PRIVATE KEY-----
+
+closed
+
+bandit16@bandit:~$ cd /tmp
+bandit16@bandit:/tmp$ mkdir shitt
+bandit16@bandit:/tmp$ cd shitt
+bandit16@bandit:/tmp/shitt$ vi keyy
+bandit16@bandit:/tmp/shitt$ ls
+keyy
+bandit16@bandit:/tmp/shitt$ cat keyy
+-----BEGIN RSA PRIVATE KEY-----
+MIIEogIBAAKCAQEAvmOkuifmMg6HL2YPIOjon6iWfbp7c3jx34YkYWqUH57SUdyJ
+imZzeyGC0gtZPGujUSxiJSWI/oTqexh+cAMTSMlOJf7+BrJObArnxd9Y7YT2bRPQ
+Ja6Lzb558YW3FZl87ORiO+rW4LCDCNd2lUvLE/GL2GWyuKN0K5iCd5TbtJzEkQTu
+DSt2mcNn4rhAL+JFr56o4T6z8WWAW18BR6yGrMq7Q/kALHYW3OekePQAzL0VUYbW
+JGTi65CxbCnzc/w4+mqQyvmzpWtMAzJTzAzQxNbkR2MBGySxDLrjg0LWN6sK7wNX
+x0YVztz/zbIkPjfkU1jHS+9EbVNj+D1XFOJuaQIDAQABAoIBABagpxpM1aoLWfvD
+KHcj10nqcoBc4oE11aFYQwik7xfW+24pRNuDE6SFthOar69jp5RlLwD1NhPx3iBl
+J9nOM8OJ0VToum43UOS8YxF8WwhXriYGnc1sskbwpXOUDc9uX4+UESzH22P29ovd
+d8WErY0gPxun8pbJLmxkAtWNhpMvfe0050vk9TL5wqbu9AlbssgTcCXkMQnPw9nC
+YNN6DDP2lbcBrvgT9YCNL6C+ZKufD52yOQ9qOkwFTEQpjtF4uNtJom+asvlpmS8A
+vLY9r60wYSvmZhNqBUrj7lyCtXMIu1kkd4w7F77k+DjHoAXyxcUp1DGL51sOmama
++TOWWgECgYEA8JtPxP0GRJ+IQkX262jM3dEIkza8ky5moIwUqYdsx0NxHgRRhORT
+8c8hAuRBb2G82so8vUHk/fur85OEfc9TncnCY2crpoqsghifKLxrLgtT+qDpfZnx
+SatLdt8GfQ85yA7hnWWJ2MxF3NaeSDm75Lsm+tBbAiyc9P2jGRNtMSkCgYEAypHd
+HCctNi/FwjulhttFx/rHYKhLidZDFYeiE/v45bN4yFm8x7R/b0iE7KaszX+Exdvt
+SghaTdcG0Knyw1bpJVyusavPzpaJMjdJ6tcFhVAbAjm7enCIvGCSx+X3l5SiWg0A
+R57hJglezIiVjv3aGwHwvlZvtszK6zV6oXFAu0ECgYAbjo46T4hyP5tJi93V5HDi
+Ttiek7xRVxUl+iU7rWkGAXFpMLFteQEsRr7PJ/lemmEY5eTDAFMLy9FL2m9oQWCg
+R8VdwSk8r9FGLS+9aKcV5PI/WEKlwgXinB3OhYimtiG2Cg5JCqIZFHxD6MjEGOiu
+L8ktHMPvodBwNsSBULpG0QKBgBAplTfC1HOnWiMGOU3KPwYWt0O6CdTkmJOmL8Ni
+blh9elyZ9FsGxsgtRBXRsqXuz7wtsQAgLHxbdLq/ZJQ7YfzOKU4ZxEnabvXnvWkU
+YOdjHdSOoKvDQNWu6ucyLRAWFuISeXw9a/9p7ftpxm0TSgyvmfLF2MIAEwyzRqaM
+77pBAoGAMmjmIJdjp+Ez8duyn3ieo36yrttF5NSsJLAbxFpdlc1gvtGCWW+9Cq0b
+dxviW8+TFVEBl1O4f7HVm6EpTscdDxU+bCXWkfjuRb7Dy9GOtt9JPsX8MBTakzh3
+vBgsyi/sN3RqRBcGU40fOoZyfAMT8s1m/uYv52O6IgeuZ/ujbjY=
+-----END RSA PRIVATE KEY-----
+bandit16@bandit:/tmp/shitt$ file keyy
+keyy: PEM RSA private key
+bandit16@bandit:/tmp/shitt$ man chmod
+bandit16@bandit:/tmp/shitt$ chmod 600 keyy
+bandit16@bandit:/tmp/shitt$ ssh bandit17@localhost -i keyy
+Could not create directory '/home/bandit16/.ssh'.
+The authenticity of host 'localhost (127.0.0.1)' can't be established.
+ECDSA key fingerprint is SHA256:98UL0ZWr85496EtCRkKlo20X3OPnyPSB5tB5RPbhczc.
+Are you sure you want to continue connecting (yes/no)? yes
+Failed to add the host to the list of known hosts (/home/bandit16/.ssh/known_hosts).
+This is a OverTheWire game server. More information on http://www.overthewire.org/wargames
