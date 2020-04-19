@@ -1,0 +1,51 @@
+Level 14->15
+
+bandit14@bandit:~$ cd /etc/bandit_pass/bandit14
+-bash: cd: /etc/bandit_pass/bandit14: Not a directory
+bandit14@bandit:~$ cd /etc/
+bandit14@bandit:/etc$ ls
+adduser.conf            debconf.conf            host.conf        ld.so.conf.d    nanorc          rc3.d                      subgid
+adjtime                 debian_version          hostname         libaudit.conf   network         rc4.d                      subgid-
+alternatives            default                 hosts            lighttpd        NetworkManager  rc5.d                      subuid
+apache2                 deluser.conf            hosts.allow      locale.alias    networks        rc6.d                      subuid-
+apm                     devuan_version          hosts.deny       locale.gen      newt            rc.local                   sudoers
+apparmor                dhcp                    identd.conf      localtime       nsswitch.conf   rcS.d                      sudoers.d
+apparmor.d              dictionaries-common     identd.key       logcheck        ntp.conf        reportbug.conf             supervisor
+apt                     discover.conf.d         inetd.conf       login.defs      opt             resolv.conf                sysctl.conf
+bandit_pass             discover-modprobe.conf  inetd.d          logrotate.conf  os-release      rmt                        sysctl.d
+bash.bashrc             dpkg                    init             logrotate.d     pam.conf        rpc                        systemd
+bash_completion         elogind                 init.d           ltrace.conf     pam.d           rsyslog.conf               terminfo
+bash_completion.d       emacs                   initramfs-tools  lvm             passwd          rsyslog.d                  timezone
+bindresvport.blacklist  environment             inittab          magic           passwd-         screenrc                   tmpfiles.d
+ca-certificates         firewall                inputrc          magic.mime      perl            securetty                  ucf.conf
+ca-certificates.conf    fstab                   insserv          mailcap         polkit-1        security                   udev
+calendar                gai.conf                insserv.conf     mailcap.order   profile         selinux                    ufw
+ConsoleKit              gdb                     insserv.conf.d   manpath.config  profile.d       services                   update-motd.d
+console-setup           groff                   iproute2         mime.types      protocols       sgml                       vim
+cron.d                  group                   issue            mke2fs.conf     python          shadow                     wgetrc
+cron.daily              group-                  issue.net        modprobe.d      python2.7       shadow-                    X11
+cron.hourly             grub.d                  kernel           modules         python3         shells                     xdg
+cron.monthly            gshadow                 kernel-img.conf  motd            python3.5       skel                       xml
+crontab                 gshadow-                ldap             mtab            rc0.d           ssh
+cron.weekly             gss                     ld.so.cache      Muttrc          rc1.d           ssl
+dbus-1                  hdparm.conf             ld.so.conf       Muttrc.d        rc2.d           staff-group-for-usr-local
+bandit14@bandit:/etc$ cd bandit_pass/
+bandit14@bandit:/etc/bandit_pass$ ls
+bandit0   bandit11  bandit14  bandit17  bandit2   bandit22  bandit25  bandit28  bandit30  bandit33  bandit6  bandit9
+bandit1   bandit12  bandit15  bandit18  bandit20  bandit23  bandit26  bandit29  bandit31  bandit4   bandit7
+bandit10  bandit13  bandit16  bandit19  bandit21  bandit24  bandit27  bandit3   bandit32  bandit5   bandit8
+bandit14@bandit:/etc/bandit_pass$ cd bandit14
+-bash: cd: bandit14: Not a directory
+bandit14@bandit:/etc/bandit_pass$ cat bandit 14
+cat: bandit: No such file or directory
+cat: 14: No such file or directory
+bandit14@bandit:/etc/bandit_pass$ cat bandit14
+4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e
+Connection closed by foreign host.
+bandit14@bandit:~$ telnet localhost 30000
+Trying 127.0.0.1...
+Connected to localhost.
+Escape character is '^]'.
+4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e
+Correct!
+BfMYroe26WYalil77FoDi9qh59eK5xNr
