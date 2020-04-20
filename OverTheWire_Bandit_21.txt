@@ -1,19 +1,12 @@
-Level 20->21
+Level 21->22
 
-#SHELL1
-bandit20@bandit:~$ nc -l localhost -p  12345
-
-#SHELL2
-./suconnect 12345
-
-#SHELL1
-GbKksEFF4yrVs6il55v6gwY5aVje5f0j
-
-#SHELL2
-Read: GbKksEFF4yrVs6il55v6gwY5aVje5f0j
-Password matches, sending next password
-
-#SHELL1
-GbKksEFF4yrVs6il55v6gwY5aVje5f0j
-gE269g2h3mw3pwgrj0Ha9Uoqen1c9DGr
+bandit21@bandit:/etc/cron.d$ cat cronjob_bandit22
+@reboot bandit22 /usr/bin/cronjob_bandit22.sh &> /dev/null
+* * * * * bandit22 /usr/bin/cronjob_bandit22.sh &> /dev/null
+cat /usr/bin/cronjob_bandit22.sh
+#!/bin/bash
+chmod 644 /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
+cat /etc/bandit_pass/bandit22 > /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
+bandit21@bandit:/dev$ cat /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
+Yk7owGAcWjwMVRwrTesJEwB7WVOiILLI
 

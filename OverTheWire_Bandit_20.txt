@@ -1,26 +1,19 @@
-Level 19->20
+Level 20->21
 
-bandit19@bandit:~$ ls
-bandit20-do
-bandit19@bandit:~$ ./bandit20-do
-Run a command as another user.
-  Example: ./bandit20-do id
-bandit19@bandit:~$ ./bandit20-do 1
-env: ‘1’: No such file or directory
-bandit19@bandit:~$ ./bandit20-do id
-uid=11019(bandit19) gid=11019(bandit19) euid=11020(bandit20) groups=11019(bandit19)
-bandit19@bandit:~$ whoami
-bandit19
-bandit19@bandit:~$ ./bandit20-do bandit20
-env: ‘bandit20’: No such file or directory
-bandit19@bandit:~$ ./bandit20-do bandit19
-env: ‘bandit19’: No such file or directory
-bandit19@bandit:~$ ./bandit20-do 11020
-env: ‘11020’: No such file or directory
-bandit19@bandit:~$ ./bandit20-do id
-uid=11019(bandit19) gid=11019(bandit19) euid=11020(bandit20) groups=11019(bandit19)
-bandit19@bandit:~$ ./bandit20-do whoami
-bandit20
-bandit19@bandit:~$ ./bandit20-do cat /etc/bandit_pass/bandit20
+#SHELL1
+bandit20@bandit:~$ nc -l localhost -p  12345
+
+#SHELL2
+./suconnect 12345
+
+#SHELL1
 GbKksEFF4yrVs6il55v6gwY5aVje5f0j
+
+#SHELL2
+Read: GbKksEFF4yrVs6il55v6gwY5aVje5f0j
+Password matches, sending next password
+
+#SHELL1
+GbKksEFF4yrVs6il55v6gwY5aVje5f0j
+gE269g2h3mw3pwgrj0Ha9Uoqen1c9DGr
 
