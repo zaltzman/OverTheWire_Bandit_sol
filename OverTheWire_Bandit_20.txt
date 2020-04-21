@@ -1,0 +1,19 @@
+Level 20->21
+
+#SHELL1
+bandit20@bandit:~$ nc -l localhost -p  12345
+
+#SHELL2
+./suconnect 12345
+
+#SHELL1
+GbKksEFF4yrVs6il55v6gwY5aVje5f0j
+
+#SHELL2
+Read: GbKksEFF4yrVs6il55v6gwY5aVje5f0j
+Password matches, sending next password
+
+#SHELL1
+GbKksEFF4yrVs6il55v6gwY5aVje5f0j
+gE269g2h3mw3pwgrj0Ha9Uoqen1c9DGr
+

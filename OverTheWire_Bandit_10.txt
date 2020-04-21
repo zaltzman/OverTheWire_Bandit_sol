@@ -1,0 +1,8 @@
+Level 10->11
+
+bandit10@bandit:~$ man base64
+bandit10@bandit:~$ ls -a
+.  ..  .bash_logout  .bashrc  data.txt  .profile
+bandit10@bandit:~$ man base64
+bandit10@bandit:~$ base64 -d data.txt
+The password is IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
